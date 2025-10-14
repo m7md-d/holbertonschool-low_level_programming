@@ -4,7 +4,11 @@
 #include <stdlib.h>
 
 /* betty style doc for function main goes there */
-/* this code for if else functions! */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n;

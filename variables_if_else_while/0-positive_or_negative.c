@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 /* betty style doc for function main goes there */
+/* this code for if else functions! */
 int main(void)
 {
 int n;

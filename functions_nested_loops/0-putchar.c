@@ -2,12 +2,11 @@
 
 /**
  *
- *
+ * print whithout <stdio.h>
  *
  *
  *
  */
-
 int main(void)
 {
 	char text[] = "_putchar";

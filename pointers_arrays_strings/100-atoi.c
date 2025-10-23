@@ -9,7 +9,8 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, neg = 0, num = 0;
+	int i = 0, neg = 0;
+	long num = 0;
 
 	while (s[i] != '\0')
 	{
@@ -29,7 +30,7 @@ int _atoi(char *s)
 			{
 				num = -num;
 			}
-			return (num);
+			return ((int)num);
 		}
 		else if (s[i] == '-')
 		{

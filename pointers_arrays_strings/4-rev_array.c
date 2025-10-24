@@ -1,0 +1,36 @@
+#include <stdlib.h>
+
+/**
+ * reverse_array - Reverses the content of an array of integers.
+ * The function uses a temporary buffer to perform the reversal.
+ * @a: A pointer to the array of integers.
+ * @n: The number of elements in the array.
+ *
+ * Return: void
+ */
+void reverse_array(int *a, int n)
+{
+	int *tmp = malloc(sizeof(int) * n);
+	int i = 0;
+	int len = n - 1;
+
+	if (tmp == NULL)
+	{
+		return;
+	}
+
+	while (len >= 0)
+	{
+		tmp[i] = a[len];
+		i++;
+		len--;
+	}
+
+	while (i >= 0)
+	{
+		i--;
+		a[i] = tmp[i];
+	}
+
+	free(tmp);
+}

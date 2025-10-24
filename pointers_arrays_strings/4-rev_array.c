@@ -12,7 +12,7 @@ void reverse_array(int *a, int n)
 {
 	int *tmp = malloc(sizeof(int) * n);
 	int i = 0;
-	int len = n - 1;
+	int len = n;
 
 	if (tmp == NULL)
 	{
@@ -21,16 +21,15 @@ void reverse_array(int *a, int n)
 
 	while (len >= 0)
 	{
+		len--;
 		tmp[i] = a[len];
 		i++;
-		len--;
 	}
 
 	while (i >= 0)
 	{
-		i--;
 		a[i] = tmp[i];
+		i--;
 	}
-
 	free(tmp);
 }

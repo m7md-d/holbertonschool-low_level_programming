@@ -19,7 +19,6 @@ void print_number(int n)
 		_putchar('0');
 		return;
 	}
-
 	if (n < 0)
 	{
 		_putchar('-');
@@ -29,15 +28,12 @@ void print_number(int n)
 	{
 		num = n;
 	}
-
 	num_ = num;
-
 	while (num / 10 != 0)
 	{
 		i++;
 		num /= 10;
 	}
-
 	while (i > 0)
 	{
 		tmp = i;

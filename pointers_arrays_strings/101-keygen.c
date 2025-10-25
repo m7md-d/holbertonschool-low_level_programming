@@ -20,11 +20,11 @@
  */
 int main (void)
 {
-	srand(time(NULL));
-
 	int rem = TAR;
 	char pass[MAX_LEN];
 	int i = 0;
+
+	srand(time(NULL));
 
 	while (rem > MAX)
 	{

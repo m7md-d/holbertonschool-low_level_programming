@@ -9,7 +9,7 @@
  * Return: Always 0
  */
 
-int main (void)
+int main(void)
 {
 	long number = 612852475143;
 	long fac = 2;

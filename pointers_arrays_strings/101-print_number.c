@@ -1,0 +1,50 @@
+#include "main.h"
+
+/**
+ * print_number - prints an integer using _putchar
+ * @n: integer to print
+ *
+ * Description: This function prints any integer, positive
+ * or negative, character by character, using only _putchar.
+ */
+void print_number(int n)
+{
+	unsigned int num, num_;
+	int i = 1;
+	int tmp = 0;
+	int j = 1;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	if (n < 0)
+	{
+		_putchar('-');
+		num = -n;
+	}
+	else
+	{
+		num = n;
+	}
+	num_ = num;
+	while (num / 10 != 0)
+	{
+		i++;
+		num /= 10;
+	}
+	while (i > 0)
+	{
+		tmp = i;
+		while (tmp > 1)
+		{
+			j *= 10;
+			tmp--;
+		}
+		_putchar((num_ / j) + '0');
+		num_ %= j;
+		i--;
+		j = 1;
+	}
+}

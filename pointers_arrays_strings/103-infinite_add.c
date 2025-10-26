@@ -27,6 +27,20 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		n2_--;
 	}
 	r[i] = carry + '0';
+	if (size_n1 > size_n2)
+	{
+		for (; i <= size_n1; i++)
+		{
+			r[i] = n1[n1_] - '0';
+		}
+	}
+	else if (size_n2 > size_n1)
+	{
+		for (; i <= size_n2; i++)
+		{
+			r[i] = n2[n2_] - '0';
+		}
+	}
 	for (i = 0; r[i] != 0; i++)
 	
 	if (i >= size_r)

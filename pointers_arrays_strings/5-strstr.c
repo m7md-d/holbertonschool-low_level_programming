@@ -1,6 +1,7 @@
 /**
  * _strstr - Locates a substring.
- * Finds the first occurrence of the entire substring needle in the string haystack.
+ * Finds the first occurrence of the entire string needle
+ * (excluding the terminating null byte) within the string haystack.
  * @haystack: The pointer to the string to be searched.
  * @needle: The pointer to the substring to be located.
  *
@@ -11,19 +12,25 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, j = 0;
 
+	if (needle[j] == '\0')
+	{
+		return (haystack);
+	}
+
 	while (haystack[i] != '\0')
 	{
 		if (needle[j] == haystack[i])
 		{
 			j++;
-			if (needle[j] == '\0')
-			{
-				return (haystack + 1 + i - j);
-			}
 		}
 		else
 		{
+			i -= j;
 			j = 0;
+		}
+		if (needle[j] == '\0')
+		{
+			return (haystack + 1 + i - j);
 		}
 		i++;
 	}

@@ -17,14 +17,13 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		puts("Error");
-		return(1);
+		return (1);
 	}
 	x = atoi(argv[1]);
-	
 	if (x < 0)
 	{
 		puts("0");
-		return(0);
+		return (0);
 	}
 	while (x - 25 >= 0)
 	{
@@ -52,5 +51,5 @@ int main(int argc, char **argv)
 		x--;;
 	}
 	printf("%d\n", i);
-	return(0);
+	return (0);
 }

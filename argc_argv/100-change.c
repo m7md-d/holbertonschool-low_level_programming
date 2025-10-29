@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	while (x - 1 >= 0)
 	{
 		i++;
-		x--;;
+		x--;
 	}
 	printf("%d\n", i);
 	return (0);

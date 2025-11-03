@@ -1,5 +1,4 @@
 #include <stdlib.h>
-
 /**
  * str_concat - Concatenates two strings by allocating new memory.
  * The returned pointer should be freed by the caller.
@@ -13,7 +12,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int i, j, sum = 0;
 	char *p;
-
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -22,23 +20,22 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	for(i = 0; s1[i] != '\0'; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 	}
 	sum += i;
-	for(i = 0; s2[i] != '\0'; i++)
+	for (i = 0; s2[i] != '\0'; i++)
 	{
 	}
 	sum += i + 1;
 	i = 0;
 	j = 0;
 	p = malloc(sizeof(char) * sum);
-
 	if (p == NULL)
 	{
 		return (0);
 	}
-	while(s1[i] != '\0')
+	while (s1[i] != '\0')
 	{
 		p[j] = s1[i];
 		i++;

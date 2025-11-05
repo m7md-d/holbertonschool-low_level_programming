@@ -25,4 +25,12 @@ struct dog
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
+/**
+ * print_dog - print dog status.
+ * @d: pointer to struct dog.
+ *
+ * Return: nothing.
+ */
+void print_dog(struct dog *d);
+
 #endif /* DOG_H */

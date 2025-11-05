@@ -13,4 +13,16 @@ struct dog
 	float age;
 	char *owner;
 };
+
+/**
+ * init_dog - initializes a struct dog
+ * @d: pointer to struct dog
+ * @name: name to initialize
+ * @age: age to initialize
+ * @owner: owner to initialize
+ *
+ * Return: nothing
+ */
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif /* DOG_H */

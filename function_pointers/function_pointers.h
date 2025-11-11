@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stddef.h>
+
 /**
  * _putchar - writes a character to stdout
  * @c: character to print
@@ -18,5 +20,15 @@ int _putchar(char c);
  * Description: Calls the function pointed to by @f, passing @name to it.
  */
 void print_name(char *name, void (*f)(char *));
+
+/**
+ * array_iterator - executes a function on each element of an array
+ * @array: pointer to the array
+ * @size: number of elements in the array
+ * @action: pointer to the function to be used
+ *
+ * Description: Calls @action for each element of @array.
+ */
+void array_iterator(int *array, size_t size, void (*action)(int));
 
 #endif /* MAIN_H */

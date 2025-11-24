@@ -23,7 +23,7 @@ void free_list(list_t *head)
 
 	i = head;
 	j = i->next;
-	while(i)
+	while (i)
 	{
 		free(i->str);
 		free(i);

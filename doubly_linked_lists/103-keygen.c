@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *d = "A-CHRDw871NS0E9B2TibgpnMVys5Xzvt0GJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+	char *d = "A-CHRDw87lNS0E9B2TibgpnMVys5Xzvt0GJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	char *u;
 	int len, i, tmp, sum = 0, prod = 1, sq = 0;
 	char max;

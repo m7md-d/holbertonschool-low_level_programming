@@ -18,17 +18,18 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int i, e = 0, fd = 0;
+	int i = 0, e = 0, fd = 0;
 
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 
-	for (i = 0; text_content[i]; i++)
-		;
-	if (i)
+	if (text_content != NULL)
+	{
+		for (i = 0; text_content[i]; i++)
+			;
 		e = write(fd, text_content, i);
-	
+	}
 	close(fd);
 	if (e == i)
 		return (1);

@@ -14,7 +14,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t count_r, count_w;
+	ssize_t count_r, count_w = 0;
 	char *buf;
 
 	if (!filename)
@@ -32,7 +32,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	count_r = read(fd, buf, letters);
 
-	count_w = write(1, buf, count_r);
+	if (count_r != -1)
+		count_w = write(STDOUT_FILENO, buf, count_r);
 
 	close(fd);
 	free(buf);
